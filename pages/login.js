@@ -1,4 +1,5 @@
 import React from 'react';
+import {AppContainer} from '../src/components/AppContainerComponent';
 
 const AppContainer = props => <div>{props.children}</div>;
 const AppInput = props => (
