@@ -1,22 +1,11 @@
 import React from 'react';
 import {AppContainer} from '../src/components/AppContainerComponent';
-
-const AppContainer = props => <div>{props.children}</div>;
-const AppInput = props => (
-	<div>
-		<label>{props.label}</label>
-		<input type={props.type} title={props.title} />
-	</div>
-);
-const AppButton = props => (
-	<div>
-		<input type="submit" title={props.title} />
-	</div>
-);
+import {AppButton} from '../src/components/AppButtonComponent';
+import {AppInput} from '../src/components/AppInputComponent';
 
 const Login = props => {
   return (
-    <AppContainer>
+		<AppContainer>
 			<AppInput
 				title="apelido ou email do usuário"
 				label="Usuário:"
@@ -27,11 +16,9 @@ const Login = props => {
 				type="password" 
 				title="senha do usuário" 
 			/>
-			<div>
-				<input type="submit" title="Entrar" />
-			</div>
-    </AppContainer>
-  );
+			<AppButton title="Entrar" />
+		</AppContainer>
+	);
 };
 
 export default Login;
